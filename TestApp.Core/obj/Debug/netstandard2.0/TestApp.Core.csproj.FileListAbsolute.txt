@@ -1,0 +1,9 @@
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Core\bin\Debug\netstandard2.0\TestApp.Core.deps.json
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Core\bin\Debug\netstandard2.0\TestApp.Core.dll
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Core\bin\Debug\netstandard2.0\TestApp.Core.pdb
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Core\obj\Debug\netstandard2.0\TestApp.Core.csprojAssemblyReference.cache
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Core\obj\Debug\netstandard2.0\TestApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Core\obj\Debug\netstandard2.0\TestApp.Core.AssemblyInfoInputs.cache
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Core\obj\Debug\netstandard2.0\TestApp.Core.AssemblyInfo.cs
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Core\obj\Debug\netstandard2.0\TestApp.Core.dll
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Core\obj\Debug\netstandard2.0\TestApp.Core.pdb

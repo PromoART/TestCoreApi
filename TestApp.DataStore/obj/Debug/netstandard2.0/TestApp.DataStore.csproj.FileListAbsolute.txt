@@ -1,0 +1,12 @@
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.DataStore\bin\Debug\netstandard2.0\TestApp.DataStore.deps.json
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.DataStore\bin\Debug\netstandard2.0\TestApp.DataStore.dll
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.DataStore\bin\Debug\netstandard2.0\TestApp.Core.dll
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.DataStore\bin\Debug\netstandard2.0\TestApp.Core.pdb
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.DataStore\obj\Debug\netstandard2.0\TestApp.DataStore.csprojAssemblyReference.cache
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.DataStore\obj\Debug\netstandard2.0\TestApp.DataStore.csproj.CoreCompileInputs.cache
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.DataStore\obj\Debug\netstandard2.0\TestApp.DataStore.AssemblyInfoInputs.cache
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.DataStore\obj\Debug\netstandard2.0\TestApp.DataStore.AssemblyInfo.cs
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.DataStore\obj\Debug\netstandard2.0\TestApp.DataStore.csproj.CopyComplete
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.DataStore\bin\Debug\netstandard2.0\TestApp.DataStore.pdb
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.DataStore\obj\Debug\netstandard2.0\TestApp.DataStore.dll
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.DataStore\obj\Debug\netstandard2.0\TestApp.DataStore.pdb

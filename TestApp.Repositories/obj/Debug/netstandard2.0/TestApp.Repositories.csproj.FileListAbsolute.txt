@@ -1,0 +1,12 @@
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Repositories\bin\Debug\netstandard2.0\TestApp.Repositories.deps.json
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Repositories\bin\Debug\netstandard2.0\TestApp.Repositories.dll
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Repositories\bin\Debug\netstandard2.0\TestApp.Repositories.pdb
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Repositories\bin\Debug\netstandard2.0\TestApp.Core.dll
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Repositories\bin\Debug\netstandard2.0\TestApp.Core.pdb
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Repositories\obj\Debug\netstandard2.0\TestApp.Repositories.csprojAssemblyReference.cache
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Repositories\obj\Debug\netstandard2.0\TestApp.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Repositories\obj\Debug\netstandard2.0\TestApp.Repositories.AssemblyInfoInputs.cache
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Repositories\obj\Debug\netstandard2.0\TestApp.Repositories.AssemblyInfo.cs
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Repositories\obj\Debug\netstandard2.0\TestApp.Repositories.csproj.CopyComplete
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Repositories\obj\Debug\netstandard2.0\TestApp.Repositories.dll
+C:\Users\a.himbitski\source\repos\TestApp\TestApp.Repositories\obj\Debug\netstandard2.0\TestApp.Repositories.pdb
