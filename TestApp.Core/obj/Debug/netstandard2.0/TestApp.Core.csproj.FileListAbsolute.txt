@@ -7,3 +7,11 @@ C:\Users\a.himbitski\source\repos\TestApp\TestApp.Core\obj\Debug\netstandard2.0\
 C:\Users\a.himbitski\source\repos\TestApp\TestApp.Core\obj\Debug\netstandard2.0\TestApp.Core.AssemblyInfo.cs
 C:\Users\a.himbitski\source\repos\TestApp\TestApp.Core\obj\Debug\netstandard2.0\TestApp.Core.dll
 C:\Users\a.himbitski\source\repos\TestApp\TestApp.Core\obj\Debug\netstandard2.0\TestApp.Core.pdb
+C:\work\Test\TestCoreApi\TestApp.Core\bin\Debug\netstandard2.0\TestApp.Core.deps.json
+C:\work\Test\TestCoreApi\TestApp.Core\bin\Debug\netstandard2.0\TestApp.Core.dll
+C:\work\Test\TestCoreApi\TestApp.Core\bin\Debug\netstandard2.0\TestApp.Core.pdb
+C:\work\Test\TestCoreApi\TestApp.Core\obj\Debug\netstandard2.0\TestApp.Core.csproj.CoreCompileInputs.cache
+C:\work\Test\TestCoreApi\TestApp.Core\obj\Debug\netstandard2.0\TestApp.Core.AssemblyInfoInputs.cache
+C:\work\Test\TestCoreApi\TestApp.Core\obj\Debug\netstandard2.0\TestApp.Core.AssemblyInfo.cs
+C:\work\Test\TestCoreApi\TestApp.Core\obj\Debug\netstandard2.0\TestApp.Core.dll
+C:\work\Test\TestCoreApi\TestApp.Core\obj\Debug\netstandard2.0\TestApp.Core.pdb

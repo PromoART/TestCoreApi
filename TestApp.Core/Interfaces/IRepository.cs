@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace TestApp.Core.Interfaces
 {
-    public interface IRepository<T> where T: class
+    public interface IRepository<T>:IDisposable where T: class
     {
         IEnumerable<T> GetAll();
-        T Get(T entity);
+        T Get(int id);
 
         void Create(T entity);
 
         void Update(T newEntity);
 
-        void Delete(T entity);
+        void Delete(int id);
     }
 }

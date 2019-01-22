@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TestApp.ClientDataContracts;
 using TestApp.Core;
 using TestApp.Core.Interfaces;
 
@@ -13,67 +12,70 @@ namespace TestApp.Controllers
     [ApiController]
     public class PlayerController : ControllerBase
     {
-        private readonly IRepository<Player> _playerRepo;
-        private readonly IRepository<Club> _clubRepo;
-
-        public PlayerController(IRepository<Player> playerRepo, IRepository<Club> clubRepo)
+        private readonly IService _service;
+        public PlayerController(IService service)
         {
-            _playerRepo = playerRepo;
-            _clubRepo = clubRepo;
+            _service = service ?? throw new ArgumentNullException(nameof(service));
         }
-        // GET api/player
-        [HttpGet]
-        public ActionResult<IEnumerable<string[]>> Get()
+
+        [HttpGet("")]
+        public ActionResult<IEnumerable<PlayerContract>> Get()
         {
-            var Players = new List<string[]>();
-            var storedPlayers = _playerRepo.GetAll();
-          
-            foreach (var storedPlayer in storedPlayers)
+            var players = _service.GetAllPlayer();
+
+            return players.Select(storedPlayer => new PlayerContract
             {
-                var clubName = _clubRepo.Get(new Club(storedPlayer.ClubId, null, null)).Name;
-                Players.Add(new string[] { storedPlayer.FullName, storedPlayer.Age.ToString(), clubName, storedPlayer.Position.ToString() });
-            }
-            return Players;
+                Id = storedPlayer.Id.ToString(),
+                Age = storedPlayer.Age.ToString(),
+                FullName = storedPlayer.FullName,
+                Position = storedPlayer.Position.ToString(),
+                ClubId = storedPlayer.ClubId.ToString(),
+                Club = storedPlayer.Club != null ? new ClubContract { Name = storedPlayer.Club.Name, Id = storedPlayer.Club.Id.ToString(), Town = storedPlayer.Club.Town } : null
+            }).ToList();
         }
 
-        // GET api/player/guid
         [HttpGet("{id}")]
-        public ActionResult<string[]> Get(string id)
+        public ActionResult<PlayerContract> Get(string id)
         {
-            var storedPlayer = _playerRepo.Get(new Player(Guid.Parse(id), null, Position.PointGuard, 0, Guid.NewGuid()));
-            var clubName = _clubRepo.Get(new Club(storedPlayer.ClubId, null, null)).Name;
-
-            return new string[] { storedPlayer.FullName, storedPlayer.Age.ToString(), clubName, storedPlayer.Position.ToString() };
+            var player = _service.GetPlayer(int.Parse(id));
+            return new PlayerContract
+            {
+                Age = player.Age.ToString(),
+                FullName = player.FullName,
+                Position = player.Position.ToString(),
+                Club = new ClubContract { Name = player.Club.Name, Id = player.Club.Id.ToString(), Town = player.Club.Town }
+            };
         }
 
-        // POST api/player/array
         [HttpPost]
-        public void Create([FromBody] string []values)
+        public void Create([FromBody] PlayerContract playerContract)
         {
-            var position = Enum.Parse<Position>(values[1]);
-            var clubId = _clubRepo.GetAll().Single(x => x.Name == values[3]).Id;
-            var player = new Player(Guid.NewGuid(), values[0], position, int.Parse(values[2]), clubId);
-            _playerRepo.Create(player);
+            var position = Enum.Parse<Position>(playerContract.Position);
+            var age = int.Parse(playerContract.Age);
+
+            _service.CreatePlayer(playerContract.FullName, age, position, playerContract.Club?.Name);
+
         }
 
-        // PUT api/player/array 
         [HttpPut]
-        public void Update([FromBody] string []values)
+        public void Update([FromBody] PlayerContract playerContract)
         {
-            var position = Enum.Parse<Position>(values[1]);
-            var clubId = _clubRepo.GetAll().Single(x => x.Name == values[3]).Id;
-            var player = new Player(Guid.NewGuid(), values[0], position, int.Parse(values[2]), clubId);
-            _playerRepo.Update(player);
+            var position = Enum.Parse<Position>(playerContract.Position);
+            var age = int.Parse(playerContract.Age);
+
+            var player = new Player(playerContract.FullName, position, age)
+            {
+                Club = new Club(playerContract.Club.Name, playerContract.Club.Town)
+            };
+
+            _service.UpdatePlayer(player);
         }
 
-        // DELETE api/player/guid
         [HttpDelete("{id}")]
         public void Delete(string id)
         {
-            var storedPlayer = _playerRepo.Get(new Player(Guid.Parse(id), null, Position.PointGuard, 0, Guid.NewGuid()));
-            var clubName = _clubRepo.Get(new Club(storedPlayer.ClubId, null, null)).Name;
+            _service.DeletePlayer(int.Parse(id));
 
-            _playerRepo.Delete(storedPlayer);
         }
     }
 }

@@ -5,8 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="EntityMappings.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentNHibernate" Version="2.1.2" />
-    <PackageReference Include="NHibernate" Version="5.2.2" />
+    <PackageReference Include="NHibernate" Version="5.2.3" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.109.2" />
   </ItemGroup>
 

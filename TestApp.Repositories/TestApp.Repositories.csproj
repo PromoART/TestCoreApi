@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TestApp.Core\TestApp.Core.csproj" />
+    <ProjectReference Include="..\TestApp.DataStore\TestApp.DataStore.csproj" />
   </ItemGroup>
 
 </Project>

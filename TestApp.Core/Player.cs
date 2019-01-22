@@ -1,18 +1,14 @@
-﻿using System;
-
-namespace TestApp.Core
+﻿namespace TestApp.Core
 {
     public class Player
     {
-        public Player(Guid id,string fullName, Position position, int age, Guid clubId)
+        public Player(string fullName, Position position, int age)
         {
-            Id = id;
             FullName = fullName;
             Position = position;
             Age = age;
-            ClubId = clubId;
         }
-        public Guid Id { get; }
+        public int Id { get; set; }
 
         public string FullName{ get; }
 
@@ -20,7 +16,7 @@ namespace TestApp.Core
 
         public int Age { get; }
 
-        public Guid ClubId { get; }
+        public int ClubId { get; set; }
 
         public Club Club{ get; set; }
 

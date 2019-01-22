@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TestApp.DataStore\TestApp.DataStore.csproj" />
     <ProjectReference Include="..\TestApp.Repositories\TestApp.Repositories.csproj" />
+    <ProjectReference Include="..\TestApp.Services\TestApp.Services.csproj" />
   </ItemGroup>
 
 </Project>

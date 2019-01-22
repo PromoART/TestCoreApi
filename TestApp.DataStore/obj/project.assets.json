@@ -81,7 +81,7 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "NHibernate/5.2.2": {
+      "NHibernate/5.2.3": {
         "type": "package",
         "dependencies": {
           "Antlr3.Runtime": "[3.5.1, 4.0.0)",
@@ -520,6 +520,9 @@
       "TestApp.Core/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "NHibernate": "5.2.3"
+        },
         "compile": {
           "bin/placeholder/TestApp.Core.dll": {}
         },
@@ -808,10 +811,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "NHibernate/5.2.2": {
-      "sha512": "Fma3j+NifVGR9xeBviRh/IhTxO9yotsg5thzhhtZGfA9jQC2Eu9AnBrABLy9bJP3tNf6DTE8jekZkNudEpWFuQ==",
+    "NHibernate/5.2.3": {
+      "sha512": "LaRmg7lGfqGLzLfV0rBcErvrQor9VN45WUFSgwVLFUWexQmJfKugGqj8z9ygRGsYTc+IGntWlzLcuBcF66l6PQ==",
       "type": "package",
-      "path": "nhibernate/5.2.2",
+      "path": "nhibernate/5.2.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -838,7 +841,7 @@
         "lib/netstandard2.0/NHibernate.xml",
         "nhibernate-configuration.xsd",
         "nhibernate-mapping.xsd",
-        "nhibernate.5.2.2.nupkg.sha512",
+        "nhibernate.5.2.3.nupkg.sha512",
         "nhibernate.nuspec"
       ]
     },
@@ -1642,11 +1645,12 @@
       ]
     },
     "System.Reflection.Emit.ILGeneration/4.3.0": {
-      "sha512": "59tBslAk9733NXLrUJrwNZEzbMAcu8k344OYo+wfSVygcgZ9lgBdGIzH/nrg3LYhXceynyvTc8t5/GD4Ri0/ng==",
+      "sha512": "+rD+UzHYxfXsT+YrMI0njdFaP/o1cnmSnRWy4os/NaWJC7FyCHrCOwiAKUwz+smQ3cPKZ8pAAv5zM5DDBG4K4w==",
       "type": "package",
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2476,7 +2480,7 @@
     ".NETStandard,Version=v2.0": [
       "FluentNHibernate >= 2.1.2",
       "NETStandard.Library >= 2.0.3",
-      "NHibernate >= 5.2.2",
+      "NHibernate >= 5.2.3",
       "System.Data.SQLite >= 1.0.109.2",
       "TestApp.Core >= 1.0.0"
     ]
@@ -2488,11 +2492,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\a.himbitski\\source\\repos\\TestApp\\TestApp.DataStore\\TestApp.DataStore.csproj",
+      "projectUniqueName": "C:\\work\\Test\\TestCoreApi\\TestApp.DataStore\\TestApp.DataStore.csproj",
       "projectName": "TestApp.DataStore",
-      "projectPath": "C:\\Users\\a.himbitski\\source\\repos\\TestApp\\TestApp.DataStore\\TestApp.DataStore.csproj",
+      "projectPath": "C:\\work\\Test\\TestCoreApi\\TestApp.DataStore\\TestApp.DataStore.csproj",
       "packagesPath": "C:\\Users\\a.himbitski\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\a.himbitski\\source\\repos\\TestApp\\TestApp.DataStore\\obj\\",
+      "outputPath": "C:\\work\\Test\\TestCoreApi\\TestApp.DataStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -2511,8 +2515,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\a.himbitski\\source\\repos\\TestApp\\TestApp.Core\\TestApp.Core.csproj": {
-              "projectPath": "C:\\Users\\a.himbitski\\source\\repos\\TestApp\\TestApp.Core\\TestApp.Core.csproj"
+            "C:\\work\\Test\\TestCoreApi\\TestApp.Core\\TestApp.Core.csproj": {
+              "projectPath": "C:\\work\\Test\\TestCoreApi\\TestApp.Core\\TestApp.Core.csproj"
             }
           }
         }
@@ -2538,7 +2542,7 @@
           },
           "NHibernate": {
             "target": "Package",
-            "version": "[5.2.2, )"
+            "version": "[5.2.3, )"
           },
           "System.Data.SQLite": {
             "target": "Package",

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true"
+    namespace="TestApp.DataStore.Entities" assembly="TestApp.DataStore">
+
+  <class name="PlayerEntity" table="Player">
+    
+    <id name="Id">
+      <column name="Id" sql-type="int"/>
+      <generator class="identity"/>
+    </id>
+
+    <property name="FullName">
+      <column name="FullName" sql-type ="nvarchar(256)" not-null="false" />
+    </property>
+    <property name="Position">
+      <column name="Position" sql-type="int" />
+    </property>
+    <property name="Age">
+      <column name ="Age" sql-type="int" />
+    </property>
+    <property name="ClubId">
+      <column name ="ClubId" sql-type="int" />
+    </property>
+
+  </class>
+
+  <class name="ClubEntity" table="Club">
+
+    <id name="Id">
+      <column name="Id" sql-type="int"/>
+      <generator class="identity"/>
+    </id>
+
+    <property name="Name">
+      <column name="Name"  sql-type ="nvarchar(256)" not-null="false" />
+    </property>
+
+    <property name="Town">
+      <column name="Town"  sql-type ="nvarchar(256)" not-null="false" />
+    </property>
+  </class>
+
+</hibernate-mapping>

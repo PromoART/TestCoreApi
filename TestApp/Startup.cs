@@ -10,6 +10,8 @@ using TestApp.Core;
 using TestApp.Core.Interfaces;
 using TestApp.DataStore;
 using TestApp.Repositories;
+using TestApp.Services;
+
 namespace TestApp
 {
     public class Startup
@@ -30,7 +32,8 @@ namespace TestApp
             builder.Populate(services);
             builder.RegisterType<PlayerRepository>().As<IRepository<Player>>();
             builder.RegisterType<ClubRepository>().As<IRepository<Club>>();
-            builder.RegisterType<DataStoreProvider>().As<IDataStoreProvider<Club>>().As<IDataStoreProvider<Player>>();
+            builder.RegisterType<LeagueService>().As<IService>();
+            builder.RegisterType<DataProviderFactory>().As<IDataProviderFactory>().SingleInstance();
             AppContainer = builder.Build();
 
             return new AutofacServiceProvider(AppContainer);
