@@ -3,7 +3,7 @@
 
 Update/Delete function isn't tested
 
-To create player
+To create player use:
 {
   "Id": null,
   "FullName": "Ron Harper",         -require field
@@ -18,8 +18,7 @@ To create player
             }
 }
 
-
-To create club 
+To create club use:
 {
   "Id": null,
   "Name": "Chicago Bulls",          -require field
