@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using TestApp.ClientDataContracts;
-using TestApp.Core;
+using TestApp.Core.Domain;
 using TestApp.Core.Interfaces;
 
-namespace TestApp.Controllers
+namespace TestApp.v2.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ClubController : ControllerBase
+    public class TeamController : ControllerBase
     {
         private readonly IService _service;
 
-        public ClubController(IService service)
+        public TeamController(IService service)
         {
             _service = service ?? throw new ArgumentNullException(nameof(service));
         }

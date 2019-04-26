@@ -7,10 +7,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using TestApp.Core;
-using TestApp.Core.Interfaces;
+using TestApp.Core.Data;
+using TestApp.Core.Domain;
 using TestApp.DataStore;
 using TestApp.Repositories;
-using TestApp.Services;
 
 namespace TestApp
 {
@@ -31,9 +31,8 @@ namespace TestApp
             var builder = new ContainerBuilder();
             builder.Populate(services);
             builder.RegisterType<PlayerRepository>().As<IRepository<Player>>();
-            builder.RegisterType<ClubRepository>().As<IRepository<Club>>();
-            builder.RegisterType<LeagueService>().As<IService>();
-            builder.RegisterType<DataProviderFactory>().As<IDataProviderFactory>().SingleInstance();
+            builder.RegisterType<TeamRepository>().As<IRepository<Team>>();
+            builder.RegisterType<NHibernateSessionFactoryProvider>().As<INHibernateSessionFactoryProvider>().SingleInstance();
             AppContainer = builder.Build();
 
             return new AutofacServiceProvider(AppContainer);
@@ -48,7 +47,6 @@ namespace TestApp
                 app.UseDeveloperExceptionPage();
 
             app.UseMvc();
-
         }
     }
 }

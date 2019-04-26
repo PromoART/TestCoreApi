@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TestApp.Core
+namespace TestApp.Core.Domain
 {
     [Flags]
     public enum Position
